@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>கற்பக விநாயகர் ஜோதிட நிலையம் — R.A. சுந்தரேசன் ஐயர் | ஜாதகம் · பொருத்தம் · சுபகாரியங்கள்</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Tamil:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d1030;--ink-2:#171a45;--veil:#23265f;
+    --gold:#d9b25e;--gold-soft:#efd9a3;--star:#f6f3ea;--mist:#a7abd4;
+    --line:rgba(217,178,94,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(1200px 600px at 70% -10%, rgba(217,178,94,.10), transparent 60%),
+      radial-gradient(900px 500px at 10% 20%, rgba(120,130,220,.12), transparent 55%),
+      linear-gradient(180deg,#0a0c26 0%, var(--ink) 40%, var(--ink-2) 100%);
+    color:var(--star);font-family:"Noto Sans Tamil","Catamaran",sans-serif;line-height:1.7;overflow-x:hidden;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .disp{font-family:"Cormorant Garamond","Noto Sans Tamil",serif}
+
+  .sky{position:fixed;inset:0;z-index:-1;pointer-events:none}
+  .sky span{position:absolute;background:#fff;border-radius:50%;opacity:.7;animation:tw 4s infinite ease-in-out}
+  @keyframes tw{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.9;transform:scale(1.1)}}
+  @media (prefers-reduced-motion:reduce){.sky span{animation:none}}
+
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(10,12,38,.55);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.03em}
+  .brand .mark{width:30px;height:30px}
+  .navlinks{display:flex;gap:26px;list-style:none}
+  .navlinks a{color:var(--mist);text-decoration:none;font-size:.95rem;transition:color .2s}
+  .navlinks a:hover{color:var(--gold-soft)}
+  .nav-cta{padding:10px 20px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-soft);text-decoration:none;font-size:.9rem;transition:.25s;white-space:nowrap}
+  .nav-cta:hover{background:var(--gold);color:var(--ink)}
+  .burger{display:none;background:none;border:0;color:var(--gold-soft);font-size:1.6rem;cursor:pointer}
+
+  .hero{position:relative;text-align:center;padding:90px 0 76px}
+  .eyebrow{color:var(--gold);letter-spacing:.32em;font-size:.78rem;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2.4rem,6.5vw,4.6rem);line-height:1.06;color:var(--star)}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero .name{margin-top:18px;font-size:1.35rem;color:var(--gold-soft);letter-spacing:.04em;font-weight:600}
+  .hero .cred{color:var(--mist);font-size:.95rem;margin-top:4px}
+  .hero p.lead{max-width:580px;margin:22px auto 34px;color:var(--mist);font-size:1.06rem}
+  .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:15px 32px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.98rem;transition:.25s;display:inline-flex;align-items:center;gap:9px}
+  .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:var(--ink);box-shadow:0 10px 30px rgba(217,178,94,.25)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(217,178,94,.38)}
+  .btn-wa{background:#1faa59;color:#fff}
+  .btn-wa:hover{transform:translateY(-2px);background:#23c267}
+  .btn-ghost{border:1px solid var(--line);color:var(--star)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+
+  .ring{margin:60px auto 0;width:min(330px,70vw);aspect-ratio:1;position:relative}
+  .ring svg{width:100%;height:100%;animation:spin 80s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.ring svg{animation:none}}
+
+  section{padding:80px 0}
+  .sec-head{text-align:center;margin-bottom:52px}
+  .sec-head .eyebrow{margin-bottom:14px}
+  .sec-head h2{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,4.5vw,3rem);color:var(--star)}
+  .sec-head p{color:var(--mist);max-width:540px;margin:14px auto 0}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+  .card{background:linear-gradient(180deg,rgba(35,38,95,.45),rgba(23,26,69,.35));border:1px solid var(--line);border-radius:18px;padding:34px 30px;transition:.3s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(217,178,94,.55)}
+  .card .icon{width:46px;height:46px;margin-bottom:18px;color:var(--gold)}
+  .card h3{font-family:"Cormorant Garamond",serif;font-size:1.5rem;margin-bottom:10px;color:var(--gold-soft)}
+  .card p{color:var(--mist);font-size:.98rem;margin-bottom:14px}
+  .card a.more{display:inline-block;margin-top:6px;color:var(--star);text-decoration:none;font-size:.92rem;border-bottom:1px solid var(--line);padding-bottom:2px}
+  .card a.more:hover{color:var(--gold-soft);border-color:var(--gold)}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+  .step .num{font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--gold);opacity:.6}
+  .step h4{font-size:1.15rem;margin:6px 0 8px;color:var(--star)}
+  .step p{color:var(--mist);font-size:.95rem}
+
+  .about{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
+  .about.about-nophoto{grid-template-columns:1fr;max-width:760px;margin:0 auto;text-align:center}
+  .about.about-nophoto .stats{justify-content:center}
+  .about .photo{aspect-ratio:4/5;border-radius:20px;border:1px solid var(--line);background:radial-gradient(circle at 50% 30%,rgba(217,178,94,.25),transparent 60%),linear-gradient(160deg,#1c2052,#0d1030);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+  .about .photo .glyph{font-family:"Cormorant Garamond",serif;font-size:4.4rem;color:var(--gold-soft);opacity:.6}
+  .about .photo small{color:var(--mist);font-size:.78rem;margin-top:10px;opacity:.8}
+  .about h2{font-family:"Cormorant Garamond",serif;font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:16px}
+  .about p{color:var(--mist);margin-bottom:16px}
+  .about .stats{display:flex;gap:36px;margin-top:24px;flex-wrap:wrap}
+  .about .stats div b{font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--gold);display:block}
+  .about .stats div span{color:var(--mist);font-size:.85rem}
+
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+  .quote{background:rgba(23,26,69,.4);border:1px solid var(--line);border-radius:16px;padding:30px}
+  .quote p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.2rem;color:var(--star);margin-bottom:16px}
+  .quote .who{color:var(--gold);font-size:.9rem;letter-spacing:.04em}
+
+  .contact{background:linear-gradient(160deg,rgba(35,38,95,.5),rgba(13,16,48,.6));border:1px solid var(--line);border-radius:24px;padding:52px 44px;max-width:780px;margin:0 auto;text-align:center}
+  .contact h2{font-family:"Cormorant Garamond",serif;font-size:2.3rem;margin-bottom:8px}
+  .contact .sub{color:var(--mist);margin-bottom:30px}
+  .phone-big{display:inline-flex;align-items:center;gap:12px;font-family:"Catamaran",sans-serif;font-weight:800;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--gold-soft);text-decoration:none;letter-spacing:.06em;transition:.2s}
+  .phone-big:hover{color:var(--gold)}
+  .phone-big svg{width:30px;height:30px;color:var(--gold)}
+  .phone-big.gpay{display:flex;font-size:clamp(1.4rem,4vw,2rem);margin-top:14px;justify-content:center}
+  .gpay-tag{font-family:"Noto Sans Tamil",sans-serif;font-size:.7rem;font-weight:800;letter-spacing:.1em;background:var(--gold);color:var(--ink);padding:4px 12px;border-radius:999px;margin-left:6px;vertical-align:middle}
+  .contact .btns{margin-top:30px}
+  .contact .hours{margin-top:26px;color:var(--mist);font-size:.92rem}
+  .address{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:16px 24px;border:1px solid var(--line);border-radius:14px;background:rgba(13,16,48,.4);text-decoration:none;transition:.25s;cursor:pointer}
+  .address:hover{border-color:var(--gold);background:rgba(35,38,95,.5);transform:translateY(-2px)}
+  .address svg{width:26px;height:26px;color:var(--gold);flex-shrink:0}
+  .address p{color:var(--star);font-size:1rem;line-height:1.5;text-align:left}
+  .address strong{color:var(--gold-soft);font-weight:600}
+  .map-cue{display:inline-block;margin-top:8px;color:var(--gold);font-size:.82rem;font-weight:600}
+
+  footer{border-top:1px solid var(--line);padding:46px 0 36px;margin-top:40px}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  .foot .brand{font-size:1.05rem}
+  .foot p{color:var(--mist);font-size:.86rem}
+  .foot a{color:var(--mist);text-decoration:none;margin-left:18px}
+  .foot a:hover{color:var(--gold-soft)}
+
+  /* featured pariharam */
+  .feature{padding:80px 0}
+  .feature .panel{background:linear-gradient(135deg,rgba(217,178,94,.16),rgba(35,38,95,.5));border:1px solid rgba(217,178,94,.5);border-radius:26px;padding:54px 48px;position:relative;overflow:hidden}
+  .feature .panel::before{content:"";position:absolute;top:-40%;right:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(217,178,94,.22),transparent 70%);pointer-events:none}
+  .feature .tag{display:inline-block;background:var(--gold);color:var(--ink);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  .feature h2{font-family:"Cormorant Garamond",serif;font-size:clamp(2.1rem,5vw,3.2rem);color:var(--star);margin-bottom:14px;position:relative}
+  .feature .intro{color:var(--mist);max-width:620px;margin-bottom:34px;position:relative}
+  .pari-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;position:relative}
+  .pari{background:rgba(13,16,48,.45);border:1px solid var(--line);border-radius:16px;padding:24px 22px;transition:.3s}
+  .pari:hover{border-color:rgba(217,178,94,.6);transform:translateY(-4px)}
+  .pari .pi{width:38px;height:38px;color:var(--gold);margin-bottom:12px}
+  .pari h4{font-family:"Cormorant Garamond",serif;font-size:1.25rem;color:var(--gold-soft);margin-bottom:6px}
+  .pari p{color:var(--mist);font-size:.92rem}
+  .feature .cta-row{margin-top:34px;position:relative}
+
+  /* inquiry form */
+  .form-card{background:linear-gradient(160deg,rgba(35,38,95,.5),rgba(13,16,48,.6));border:1px solid var(--line);border-radius:24px;padding:48px 44px;max-width:720px;margin:0 auto}
+  .form-card h2{font-family:"Cormorant Garamond",serif;font-size:2.2rem;text-align:center;margin-bottom:8px}
+  .form-card .sub{text-align:center;color:var(--mist);margin-bottom:32px}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-size:.9rem;color:var(--gold-soft);margin-bottom:8px}
+  .field input,.field select,.field textarea{width:100%;padding:13px 16px;border-radius:12px;background:rgba(10,12,38,.6);border:1px solid var(--line);color:var(--star);font-family:inherit;font-size:.98rem}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  .field textarea{resize:vertical}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .form-card .send{width:100%;margin-top:8px;padding:16px;border:0;border-radius:999px;cursor:pointer;background:#1faa59;color:#fff;font-weight:800;font-size:1rem;font-family:inherit;transition:.25s;display:flex;align-items:center;justify-content:center;gap:10px}
+  .form-card .send:hover{transform:translateY(-2px);background:#23c267}
+  .form-card .send svg{width:22px;height:22px;fill:#fff}
+  .form-note{text-align:center;color:var(--mist);font-size:.85rem;margin-top:16px}
+  @media(max-width:760px){.frow{grid-template-columns:1fr}.form-card{padding:34px 22px}}
+
+  .fab{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#1faa59;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:.25s}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:30px;height:30px;fill:#fff}
+
+  @media(max-width:760px){
+    .navlinks{display:none}.burger{display:block}
+    .about{grid-template-columns:1fr}
+    .contact{padding:36px 22px}
+  }
+</style>
+</head>
+<body>
+<div class="sky" id="sky"></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="#d9b25e" stroke-width="1.4">
+          <circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18" opacity=".5"/>
+          <circle cx="12" cy="12" r="3" fill="#d9b25e" stroke="none"/>
+        </svg>
+        <span>கற்பக விநாயகர் ஜோதிட நிலையம்</span>
+      </div>
+      <ul class="navlinks">
+        <li><a href="#pariharam">பரிகாரம்</a></li>
+        <li><a href="#services">ஜோதிட சேவைகள்</a></li>
+        <li><a href="#events">சுபகாரியங்கள்</a></li>
+        <li><a href="#about">ஐயர் பற்றி</a></li>
+        <li><a href="#voices">கருத்துகள்</a></li>
+        <li><a href="#inquiry">விசாரணை</a></li>
+      </ul>
+      <a href="tel:+919364100230" class="nav-cta">☎ 93641 00230</a>
+      <button class="burger" onclick="document.querySelector('.navlinks').style.display='flex'">☰</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">விண்மீன்களின் வழிகாட்டல்</p>
+    <h1 class="disp">தடைகள் <em>நீங்கும்</em>,<br>நல்வழி <em>பிறக்கும்</em></h1>
+    <div class="name">ஜோதிட நிபுணர் — R.A. சுந்தரேசன் ஐயர்</div>
+    <div class="cred">10+ ஆண்டுகால அனுபவம் · ஜோதிடம் & சுபகாரிய வழிகாட்டல்</div>
+    <p class="lead">தோஷ பரிகாரம், ஜாதக கணிப்பு, திருமணப் பொருத்தம், சுபமுகூர்த்தம் முதல் நாமகரணம் வரை — வாழ்க்கையின் ஒவ்வொரு முக்கிய தருணத்திற்கும் பாரம்பரிய அறிவுடன் வழிகாட்டல்.</p>
+    <div class="btns">
+      <a href="tel:+919364100230" class="btn btn-primary">☎ அழைக்கவும்</a>
+      <a href="https://wa.me/919364100230?text=வணக்கம்%20ஐயர்,%20ஜோதிட%20ஆலோசனைக்காக%20தொடர்பு%20கொள்கிறேன்." class="btn btn-wa" target="_blank" rel="noopener">WhatsApp-ல் பேச</a>
+    </div>
+
+    <div class="ring" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" stroke="#d9b25e" stroke-width="0.6">
+        <circle cx="100" cy="100" r="92" opacity=".4"/>
+        <circle cx="100" cy="100" r="72" opacity=".3"/>
+        <circle cx="100" cy="100" r="52" opacity=".25"/>
+        <g font-family="serif" font-size="11" fill="#efd9a3" stroke="none" text-anchor="middle">
+          <text x="100" y="20">♈</text><text x="146" y="32">♉</text><text x="178" y="62">♊</text>
+          <text x="190" y="105">♋</text><text x="178" y="146">♌</text><text x="146" y="176">♍</text>
+          <text x="100" y="190">♎</text><text x="54" y="176">♏</text><text x="22" y="146">♐</text>
+          <text x="10" y="105">♑</text><text x="22" y="62">♒</text><text x="54" y="32">♓</text>
+        </g>
+        <line x1="100" y1="28" x2="100" y2="172" opacity=".2"/>
+        <line x1="28" y1="100" x2="172" y2="100" opacity=".2"/>
+        <line x1="49" y1="49" x2="151" y2="151" opacity=".15"/>
+        <line x1="151" y1="49" x2="49" y2="151" opacity=".15"/>
+        <circle cx="100" cy="100" r="4" fill="#d9b25e" stroke="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- PARIHARAM (featured) -->
+<section id="pariharam" class="feature">
+  <div class="wrap">
+    <div class="panel">
+      <span class="tag">சிறப்பு சேவை</span>
+      <h2 class="disp">தோஷ பரிகாரம்</h2>
+      <p class="intro">ஐயரின் முதன்மை சேவை — ஜாதகத்தில் உள்ள தோஷங்களையும் கிரக நிலைகளையும் ஆராய்ந்து, தடைகளை நீக்கி வாழ்வில் நன்மை பெற உகந்த பரிகாரங்களையும் வழிமுறைகளையும் தெளிவாக வழங்குகிறார்.</p>
+      <div class="pari-grid">
+        <div class="pari">
+          <svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+          <h4>தோஷ நிவர்த்தி</h4>
+          <p>நாக தோஷம், செவ்வாய் தோஷம், பித்ரு தோஷம் போன்றவற்றுக்கு உகந்த பரிகாரங்கள்.</p>
+        </div>
+        <div class="pari">
+          <svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/><circle cx="12" cy="12" r="3"/></svg>
+          <h4>கிரக சாந்தி</h4>
+          <p>பாதகமான கிரக நிலைகளுக்கு சாந்தி பூஜை, ஹோமம் வழிகாட்டல்.</p>
+        </div>
+        <div class="pari">
+          <svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l2.5 5 5.5.5-4 4 1 5.5L12 19l-5 -2.5 1-5.5-4-4 5.5-.5z"/></svg>
+          <h4>ராசி கல் & தாயத்து</h4>
+          <p>ஜாதகப்படி உகந்த ராசி கல், மோதிரம், தாயத்து தேர்வு மற்றும் வழிமுறை.</p>
+        </div>
+        <div class="pari">
+          <svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg>
+          <h4>விரத & வழிபாட்டு முறை</h4>
+          <p>தடைகள் நீங்க தினசரி வழிபாடு, விரதம், மந்திர வழிமுறைகள்.</p>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="#inquiry" class="btn btn-primary">பரிகாரம் பற்றி விசாரிக்க</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">ஜோதிட சேவைகள்</p>
+      <h2 class="disp">உங்களுக்கு ஏற்ற வாசிப்பு</h2>
+      <p>ஒவ்வொரு வாசிப்பும் தனிப்பயனாக, உங்கள் ஜாதகத்தை அடிப்படையாகக் கொண்டு செய்யப்படுகிறது.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19" opacity=".4"/></svg>
+        <h3>ஜாதக கணிப்பு</h3>
+        <p>பிறப்பு ஜாதகம் முழுமையாக வாசித்து, தொழில், ஆரோக்கியம், செல்வம் மற்றும் வாழ்க்கைப் பாதை குறித்து விரிவான விளக்கம்.</p>
+        <a class="more" href="#contact">தொடர்பு கொள்ள →</a>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg>
+        <h3>திருமணப் பொருத்தம்</h3>
+        <p>இரு ஜாதகங்களையும் ஒப்பிட்டு, பத்துப் பொருத்தம், தோஷ பரிசீலனை மற்றும் வாழ்க்கைத் துணை இணக்கம் குறித்த தெளிவான ஆலோசனை.</p>
+        <a class="more" href="#contact">தொடர்பு கொள்ள →</a>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+        <h3>வருட பலன் & தசை</h3>
+        <p>தற்போதைய தசை-புத்தி, கோசார நிலைகளைப் பார்த்து, முக்கிய முடிவுகளுக்கான வழிகாட்டல் மற்றும் பரிகாரங்கள்.</p>
+        <a class="more" href="#contact">தொடர்பு கொள்ள →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">சுபகாரியங்கள்</p>
+      <h2 class="disp">வாழ்க்கையின் ஒவ்வொரு சுபமுகூர்த்தத்திற்கும்</h2>
+      <p>பத்து ஆண்டுகளுக்கும் மேலான அனுபவத்துடன், சுபகாரியங்களுக்கு உகந்த நேரத்தையும் வழிமுறைகளையும் வகுத்துத் தருகிறார்.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l2.5 5 5.5.5-4 4 1 5.5L12 19l-5 -2.5 1-5.5-4-4 5.5-.5z"/></svg>
+        <h3>திருமணம்</h3>
+        <p>பொருத்தம் முதல் முகூர்த்த நாள், நேரம் நிர்ணயம் வரை — திருமணச் சடங்குகளுக்கான முழுமையான வழிகாட்டல்.</p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg>
+        <h3>நாமகரணம் & பிறந்தநாள்</h3>
+        <p>குழந்தைக்கு நட்சத்திரப்படி பெயர் தேர்வு, நாமகரணச் சடங்கு, முதல் பிறந்தநாள் சுபமுகூர்த்தம்.</p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg>
+        <h3>கிரகப்பிரவேசம் & பூஜை</h3>
+        <p>புதிய வீடு, தொழில் தொடக்கம், சுபகாரியங்களுக்கான முகூர்த்தம், சாந்தி பூஜை வழிகாட்டல்.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">முறை</p>
+      <h2 class="disp">எப்படி தொடர்பு கொள்வது</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h4>அழைக்கவும்</h4><p>93641 00230 எண்ணில் அழைத்து அல்லது WhatsApp-ல் தொடர்பு கொள்ளுங்கள்.</p></div>
+      <div class="step"><div class="num">02</div><h4>விவரம் பகிருங்கள்</h4><p>பிறந்த தேதி, நேரம், ஊர் — தேவையான விவரங்களைப் பகிருங்கள்.</p></div>
+      <div class="step"><div class="num">03</div><h4>ஆலோசனை</h4><p>நேரில், தொலைபேசி அல்லது வீடியோ அழைப்பு மூலம் விரிவான விளக்கம்.</p></div>
+      <div class="step"><div class="num">04</div><h4>வழிகாட்டல்</h4><p>முக்கிய புள்ளிகள், பரிகாரங்கள், சுபமுகூர்த்த நேரம் தெளிவாக வழங்கப்படும்.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about about-nophoto">
+      <div>
+        <p class="eyebrow">ஐயர் பற்றி</p>
+        <h2 class="disp">R.A. சுந்தரேசன் ஐயர் — பாரம்பரிய ஜோதிடம், அன்பான வழிகாட்டல்</h2>
+        <p>பத்து ஆண்டுகளுக்கும் மேலாக ஜோதிடத் துறையில் சேவை செய்து வரும் R.A. சுந்தரேசன் அவர்கள், ஜாதக வாசிப்பு, திருமணப் பொருத்தம் முதல் சுபகாரிய முகூர்த்தம் வரை அனைத்திலும் நிபுணத்துவம் பெற்றவர்.</p>
+        <p>ஜோதிடம் என்பது பயமுறுத்துவதல்ல — அது தெளிவையும் நம்பிக்கையையும் தரும் ஒரு வழிகாட்டி என்பதே ஐயரின் நம்பிக்கை. ஒவ்வொருவருக்கும் பொறுமையாக, தனிப்பட்ட கவனத்துடன் ஆலோசனை வழங்குகிறார்.</p>
+        <div class="stats">
+          <div><b>10+</b><span>ஆண்டு அனுபவம்</span></div>
+          <div><b>1000+</b><span>குடும்பங்கள்</span></div>
+          <div><b>தமிழ்</b><span>தெளிவான விளக்கம்</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voices">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">கருத்துகள்</p>
+      <h2 class="disp">வந்தவர்கள் சொல்வது</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote"><p>“பொருத்தம் பார்த்த விதம் மிகத் தெளிவாக இருந்தது. எங்கள் சந்தேகங்கள் எல்லாம் தீர்ந்தன.”</p><span class="who">— பிரியா & கார்த்திக்</span></div>
+      <div class="quote"><p>“திருமண முகூர்த்தம் முதல் எல்லா சடங்குகளுக்கும் ஐயர் சரியான வழிகாட்டல் தந்தார்.”</p><span class="who">— ரமேஷ்</span></div>
+      <div class="quote"><p>“பொறுமையாகக் கேட்டு, நம்பிக்கை தரும் வகையில் பேசினார். நிச்சயம் மீண்டும் தொடர்பு கொள்வேன்.”</p><span class="who">— லட்சுமி</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <p class="eyebrow">தொடர்பு கொள்ள</p>
+      <h2 class="disp">அணுகவும்</h2>
+      <p class="sub">ஜோதிட ஆலோசனை அல்லது சுபகாரிய முகூர்த்தத்திற்கு இப்போதே அழைக்கவும்.</p>
+      <a class="phone-big" href="tel:+919364100230">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        93641 00230
+      </a>
+      <a class="phone-big gpay" href="tel:+918760292353">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        87602 92353 <span class="gpay-tag">GPay</span>
+      </a>
+      <div class="btns">
+        <a href="tel:+919364100230" class="btn btn-primary">☎ அழைக்கவும்</a>
+        <a href="https://wa.me/919364100230?text=வணக்கம்%20ஐயர்,%20ஜோதிட%20ஆலோசனைக்காக%20தொடர்பு%20கொள்கிறேன்." class="btn btn-wa" target="_blank" rel="noopener">WhatsApp-ல் பேச</a>
+      </div>
+      <a class="address" href="https://www.google.com/maps/search/?api=1&query=Ramya+Residency+CKR+Nagar+Soolai+Erode+638004" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p><strong>R.A. சுந்தரேசன் ஐயர்</strong><br>94/4, ரம்யா ரெசிடென்சி, CKR நகர்,<br>சூளை, ஈரோடு - 638004<br><span class="map-cue">📍 Google Maps-ல் வழிகாட்டி காண தட்டவும்</span></p>
+      </a>
+      <p class="hours">தினமும் காலை 9 மணி முதல் இரவு 8 மணி வரை · தமிழில் ஆலோசனை</p>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY FORM -->
+<section id="inquiry">
+  <div class="wrap">
+    <div class="form-card">
+      <h2 class="disp">விசாரணை படிவம்</h2>
+      <p class="sub">விவரங்களை நிரப்பி அனுப்புங்கள் — நேரடியாக ஐயரின் WhatsApp-க்கு செல்லும்.</p>
+      <div class="frow">
+        <div class="field"><label>பெயர் *</label><input type="text" id="f_name" placeholder="உங்கள் பெயர்"></div>
+        <div class="field"><label>தொலைபேசி எண் *</label><input type="tel" id="f_phone" placeholder="+91"></div>
+      </div>
+      <div class="field"><label>எந்த சேவை வேண்டும்? *</label>
+        <select id="f_service">
+          <option value="">— தேர்ந்தெடுக்கவும் —</option>
+          <option>தோஷ பரிகாரம்</option>
+          <option>ஜாதக கணிப்பு</option>
+          <option>திருமணப் பொருத்தம்</option>
+          <option>வருட பலன் & தசை</option>
+          <option>திருமண முகூர்த்தம்</option>
+          <option>நாமகரணம் / பிறந்தநாள்</option>
+          <option>கிரகப்பிரவேசம் / பூஜை</option>
+          <option>மற்றவை</option>
+        </select>
+      </div>
+      <div class="frow">
+        <div class="field"><label>பிறந்த தேதி</label><input type="date" id="f_dob"></div>
+        <div class="field"><label>பிறந்த நேரம்</label><input type="time" id="f_tob"></div>
+      </div>
+      <div class="field"><label>பிறந்த ஊர்</label><input type="text" id="f_place" placeholder="ஊர் / மாவட்டம்"></div>
+      <div class="field"><label>உங்கள் கேள்வி / குறிப்பு</label><textarea id="f_note" rows="3" placeholder="நீங்கள் தெரிந்துகொள்ள விரும்புவது..."></textarea></div>
+      <button class="send" onclick="sendInquiry()">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp-ல் அனுப்பவும்
+      </button>
+      <p class="form-note">படிவத்தைச் சமர்ப்பித்தால் உங்கள் விவரங்களுடன் WhatsApp திறக்கும். "Send" அழுத்தினால் ஐயருக்கு செய்தி செல்லும்.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="#d9b25e" stroke-width="1.4" style="width:24px;height:24px">
+        <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3" fill="#d9b25e" stroke="none"/>
+      </svg>
+      <span>கற்பக விநாயகர் ஜோதிட நிலையம்</span>
+    </div>
+    <p>© 2026 R.A. சுந்தரேசன் ஐயர் · அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை</p>
+    <div>
+      <a href="#services">சேவைகள்</a>
+      <a href="#about">ஐயர் பற்றி</a>
+      <a href="tel:+919364100230">☎ அழைக்க</a>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/919364100230?text=வணக்கம்%20ஐயர்,%20ஜோதிட%20ஆலோசனைக்காக%20தொடர்பு%20கொள்கிறேன்." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script>
+  const sky=document.getElementById('sky');
+  for(let i=0;i<70;i++){const s=document.createElement('span');
+    const sz=Math.random()*2+1;s.style.width=sz+'px';s.style.height=sz+'px';
+    s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*4)+'s';sky.appendChild(s);}
+
+  // build a WhatsApp message from the inquiry form and open it
+  function sendInquiry(){
+    const phoneTo="919364100230";
+    const name=document.getElementById('f_name').value.trim();
+    const phone=document.getElementById('f_phone').value.trim();
+    const service=document.getElementById('f_service').value;
+    const dob=document.getElementById('f_dob').value;
+    const tob=document.getElementById('f_tob').value;
+    const place=document.getElementById('f_place').value.trim();
+    const note=document.getElementById('f_note').value.trim();
+
+    if(!name||!phone||!service){
+      alert("தயவுசெய்து பெயர், தொலைபேசி எண் மற்றும் சேவையைத் தேர்ந்தெடுக்கவும்.");
+      return;
+    }
+
+    let msg="வணக்கம் ஐயர்,\nஉங்கள் ஜோதிட சேவைக்காக விசாரிக்கிறேன்.\n\n";
+    msg+="பெயர்: "+name+"\n";
+    msg+="தொலைபேசி: "+phone+"\n";
+    msg+="சேவை: "+service+"\n";
+    if(dob)   msg+="பிறந்த தேதி: "+dob+"\n";
+    if(tob)   msg+="பிறந்த நேரம்: "+tob+"\n";
+    if(place) msg+="பிறந்த ஊர்: "+place+"\n";
+    if(note)  msg+="குறிப்பு: "+note+"\n";
+    msg+="\nநன்றி.";
+
+    const url="https://wa.me/"+phoneTo+"?text="+encodeURIComponent(msg);
+    window.open(url,"_blank");
+  }
+</script>
+</body>
+</html>
